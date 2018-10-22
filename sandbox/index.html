@@ -1,16 +1,14 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf8" />
-    <title>e.vrbi Webpack Boilerplate</title>
-    <link rel="icon" type="image/png" href="<%= htmlWebpackPlugin.files.favicon %>">
-    <% for (var css in htmlWebpackPlugin.files.css)  %>
-        <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-    <% for (var js in htmlWebpackPlugin.files.js) %>
-        <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js]%>"></script>
-    <link href="./sandbox/style.css" rel="stylesheet">
-    <script type="text/javascript" src="./sandbox/script.js"></script>
+    <title>
+        <%=(htmlWebpackPlugin.options.title || 'Webpack App').split(/-|\s+/g).map(w => w[0].toUpperCase() + w.substr(1)).join(' ')%>
+        <!-- Scripts and styles injected here -->
+    </title>
 </head>
+
 <body>
 </body>
 
